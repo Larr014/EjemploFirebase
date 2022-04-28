@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etNombre"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etApellido"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etCorreo"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etContrasenia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etContrasenia"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="registrarPersona"
+        android:text="@string/btnRegistrar" />
+
+    <Button
+        android:id="@+id/btnGoListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goListado"
+        android:text="@string/btnGoListado" />
+</LinearLayout>

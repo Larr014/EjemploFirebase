@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EjemploFirebase</string>
+    <string name="etNombre">Ingrese su nombre</string>
+    <string name="etApellido">Ingrese su apellido</string>
+    <string name="etCorreo">Ingrese su correo</string>
+    <string name="etContrasenia">Ingrese su contrasenia</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="btnGoListado">Ir a Listado</string>
+    <string name="btnActualizar">Actualizar</string>
+    <string name="btnEliminar">Eliminar</string>
+</resources>
