@@ -26,7 +26,7 @@ import Modelo.Persona;
 public class ListadoActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    public List<Persona> personas = new ArrayList<Persona>();
+    public List<Persona> personas;
     ArrayAdapter<Persona> adPersonas;
     ListView lvPersonas;
     @Override
@@ -34,9 +34,16 @@ public class ListadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
         iniciarFirebase();
+        personas = new ArrayList<Persona>();
         listarPersonas();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        personas = new ArrayList<Persona>();
+        listarPersonas();
+    }
 
     public void iniciarFirebase(){
         FirebaseApp.initializeApp(this);
@@ -68,6 +75,11 @@ public class ListadoActivity extends AppCompatActivity {
                         Persona p = (Persona) adapterView.getItemAtPosition(i);
                         Toast.makeText(ListadoActivity.this, "Persona: "+p, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(getApplicationContext(),AccionActivity.class);
+                        in.putExtra("nombre",p.getNombre());
+                        in.putExtra("apellido",p.getApellido());
+                        in.putExtra("correo",p.getCorreo());
+                        in.putExtra("pass",p.getContrasenia());
+                        in.putExtra("id",p.getId());
                         startActivity(in);
                     }
                 });

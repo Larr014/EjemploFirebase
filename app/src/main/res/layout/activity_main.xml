@@ -40,14 +40,14 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnActualizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="registrarPersona"
         android:text="@string/btnRegistrar" />
 
     <Button
-        android:id="@+id/btnGoListado"
+        android:id="@+id/btnEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="goListado"
